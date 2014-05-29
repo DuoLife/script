@@ -1,0 +1,8 @@
+#! /bin/bash
+
+for file in `ls | grep -e '^[0-9].*.jpg$'`;do
+    echo $file;
+    if [ -n $file ];then
+       rm $file; 
+    fi
+done
