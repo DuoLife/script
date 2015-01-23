@@ -1,7 +1,7 @@
 #! /bin/bash
 originDir=$1
 dir="com.coldworks.emoticon."$originDir
-newdirname=$2
+passwd=$2
 #init params
 origin="origin"
 thumb="thumb"
@@ -42,5 +42,5 @@ do
 done
 if [[ -d $dir ]];then
     echo "$dir"
-    `zip -r "$dir.zip" "$dir"`
+    `zip -r -P $passwd "$dir.zip" "$dir"`
 fi
